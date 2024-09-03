@@ -1,8 +1,9 @@
 .wrapper {
-    width: 1080px;
-    background-color: #fff;
+    max-width: 1080px;
+    background-color: #fbfbfb;
     border-radius: 20px;
     box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.26);
+    margin: 50px auto;
 
     .header {
         padding: 43px 60px;
@@ -78,5 +79,96 @@
 
     .content {
         padding: 43px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .cards {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+
+            .card {
+                position: relative;
+                background: #fff;
+                width: 210px;
+                padding: 30px;
+                border: 1px solid #e0e0e0;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                box-shadow: 19px 17px 31px 2px rgba(172, 161, 161, 0.75);
+                transition: all .3s;
+
+                &:hover {
+                    box-shadow: none;
+                }
+
+                &__bookmarks {
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    background: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #dcdcdc;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    position: absolute;
+                    left: 37px;
+                    top: 37px;
+                }
+
+                &__img {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 132px;
+                    }
+                }
+
+                &__title {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &__price {
+                    display: flex;
+                    justify-content: space-between;
+
+                    div {
+                        p {
+                            font-weight: 500;
+                            font-size: 11px;
+                            line-height: 13px;
+                            color: #bdbdbd;
+                        }
+
+                        div {
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+
+                    button {
+                        width: 32px;
+                        height: 32px;
+                        border: none;
+                        background: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #dcdcdc;
+                        border-radius: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        } 
     }
 }

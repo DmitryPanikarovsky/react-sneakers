@@ -1,15 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+ul>li {
+    list-style: none;
 }
 
 body {
     margin: 0;
-    padding: 50px 0;
-    font-family: "Inter", sans-serif;
     background-color: #e7f6ff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    justify-content: center;
 }
