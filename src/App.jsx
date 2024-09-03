@@ -41,7 +41,10 @@ function App() {
                 </div>
             </header>
             <div className="content">
-                <h1>Все кроссовки</h1>
+				<div className="content__header">
+                	<h1>Все кроссовки</h1>
+					<input className='input' placeholder='Поиск...'/>
+				</div>
                 <ul className="cards">
                     <li className="card">
 						<div className="card__bookmarks">
