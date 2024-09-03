@@ -7,12 +7,12 @@ function App() {
                 <div className="logo">
                     <img src="/logo.svg" alt="Логотип" />
                     <div className="logo__title">
-                        <div>ReactSneakers</div>
+                        <div>React Sneakers</div>
                         <p>Магазин лучших кроссовок</p>
                     </div>
                 </div>
                 <div className="info">
-                    <a href="" className="info__block">
+                    <a href="#" className="info__block">
                         <img
                             className="img"
                             src="/cart.svg"
@@ -22,7 +22,7 @@ function App() {
                             1205 <span>₽</span>
                         </div>
                     </a>
-                    <a href="" className="info__block">
+                    <a href="#" className="info__block">
                         <img
                             className="img"
                             src="/bookmarks.svg"
@@ -30,7 +30,7 @@ function App() {
                         />
                         <div>Закладки</div>
                     </a>
-                    <a href="" className="info__block">
+                    <a href="#" className="info__block">
                         <img
                             className="img"
                             src="/profile.svg"
