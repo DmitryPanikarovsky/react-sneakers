@@ -43,7 +43,10 @@ function App() {
             <div className="content">
 				<div className="content__header">
                 	<h1>Все кроссовки</h1>
-					<input className='input' placeholder='Поиск...'/>
+                    <div className="search">
+                        <img src="/img/search.svg" alt="" />
+					    <input className='input' placeholder='Поиск...'/>
+                    </div>
 				</div>
                 <ul className="cards">
                     <li className="card">
