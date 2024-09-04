@@ -5,8 +5,17 @@
     font-family: "Inter", sans-serif;
 }
 
+img {
+    display: block;
+}
+
 ul>li {
     list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
 }
 
 body {
