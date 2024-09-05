@@ -14,12 +14,13 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, .5);
         z-index: 10;
+        display: none;
 
         .drawer {
             position: absolute;
             right: 0;
             height: 100%;
-            width: 385px;
+            width: 485px;
             background-color: #f3f3f3;
             padding: 30px;
             display: flex;
@@ -99,7 +100,7 @@
                     background: none;
                     cursor: pointer;
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 38px;
                     right: 20px;
 
                     img {
