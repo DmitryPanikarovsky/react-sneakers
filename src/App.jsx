@@ -1,13 +1,13 @@
-import { Card } from './components/Card/Card';
-import { Drawer } from './components/Drawer/Drawer'
-import { Header } from './components/Header/Header';
+import { CardList } from './components/CardList/CardList'
+import { Drawer } from "./components/Drawer/Drawer";
+import { Header } from "./components/Header/Header";
 import "./styles/App.scss";
 
 function App() {
     return (
         <div className="wrapper">
-            <Drawer/>
-            <Header/>
+            <Drawer />
+            <Header />
             <div className="content">
                 <div className="content__header">
                     <h1>Все кроссовки</h1>
@@ -16,17 +16,7 @@ function App() {
                         <input className="input" placeholder="Поиск..." />
                     </div>
                 </div>
-                <ul className="cards">
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                    <Card/>               
-                </ul>
+                <CardList/>
             </div>
         </div>
     );
