@@ -1,19 +1,18 @@
-export const Card = (props) => {
+import styles from './Card.module.scss';
 
-    const {title, price, imageUrl} = props;
+export const Card = (props) => {
+    const { title, price, imageUrl } = props;
 
     return (
-        <div className="card">
-            <div className="card__bookmarks">
+        <div className={styles.Card}>
+            <div className={styles.bookmarks}>
                 <img src="/img/heart-unliked.svg" alt="сердечко" />
             </div>
-            <div className="card__img">
+            <div className={styles.img}>
                 <img src={imageUrl} alt="кроссовки" />
             </div>
-            <p className="card__title">
-                {title}
-            </p>
-            <div className="card__price">
+            <p className={styles.title}>{title}</p>
+            <div className={styles.price}>
                 <div>
                     <p>Цена:</p>
                     <div>

@@ -1,15 +1,17 @@
+import styles from './Header.module.scss';
+
 export const Header = () => {
     return (
-        <header className="header">
-            <div className="logo">
+        <header className={styles.header}>
+            <div className={styles.logo}>
                 <img src="/img/logo.svg" alt="Логотип" />
-                <div className="logo__title">
+                <div className={styles.title}>
                     <div>React Sneakers</div>
                     <p>Магазин лучших кроссовок</p>
                 </div>
             </div>
-            <div className="info">
-                <a href="#" className="info__block">
+            <div className={styles.info}>
+                <a href="#" className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/cart.svg"
@@ -19,7 +21,7 @@ export const Header = () => {
                         1205 <span>₽</span>
                     </div>
                 </a>
-                <a href="#" className="info__block">
+                <a href="#" className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/bookmarks.svg"
@@ -27,7 +29,7 @@ export const Header = () => {
                     />
                     <div>Закладки</div>
                 </a>
-                <a href="#" className="info__block">
+                <a href="#" className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/profile.svg"
