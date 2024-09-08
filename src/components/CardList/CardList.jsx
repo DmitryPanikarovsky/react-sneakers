@@ -10,6 +10,8 @@ export const CardList = () => {
                     title={item.title}
                     price={item.price}
                     imageUrl={item.imageUrl}
+                    addToFavorite={() => console.log('Добавить в избранное')}
+                    addToCart={() => console.log('Добавить в корзину')}
                 />
             ))}
         </div>
