@@ -11,7 +11,7 @@ export const Header = () => {
                 </div>
             </div>
             <div className={styles.info}>
-                <a href="#" className={styles["info-block"]}>
+                <div className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/cart.svg"
@@ -20,23 +20,23 @@ export const Header = () => {
                     <div>
                         1205 <span>₽</span>
                     </div>
-                </a>
-                <a href="#" className={styles["info-block"]}>
+                </div>
+                <div className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/bookmarks.svg"
                         alt="Иконка закладок"
                     />
                     <div>Закладки</div>
-                </a>
-                <a href="#" className={styles["info-block"]}>
+                </div>
+                <div className={styles["info-block"]}>
                     <img
                         className="img"
                         src="/img/profile.svg"
                         alt="Иконка профиля"
                     />
                     <div>Профиль</div>
-                </a>
+                </div>
             </div>
         </header>
     );

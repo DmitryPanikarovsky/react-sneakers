@@ -1,11 +1,18 @@
-import styles from './Card.module.scss';
+import { useState } from "react";
+import styles from "./Card.module.scss";
 
 export const Card = (props) => {
-    const { title, price, imageUrl, addToFavorite, addToCart } = props;
+    const { title, price, imageUrl } = props;
+    
+    const [checked, setChecked] = useState(false);
+
+    const handleClick = () => {
+        setChecked(!checked)
+    }
 
     return (
         <div className={styles.Card}>
-            <div className={styles.bookmarks} onClick={addToFavorite}>
+            <div className={styles.bookmarks}>
                 <img src="/img/heart-unliked.svg" alt="сердечко" />
             </div>
             <div className={styles.img}>
@@ -19,8 +26,15 @@ export const Card = (props) => {
                         {price} <span>₽</span>
                     </div>
                 </div>
-                <button onClick={addToCart}>
-                    <img src="/img/btn-unchecked.svg" alt="check" />
+                <button onClick={handleClick}>
+                    <img
+                        src={
+                            checked
+                                ? "/img/btn-checked.svg"
+                                : "/img/btn-unchecked.svg"
+                        }
+                        alt="check"
+                    />
                 </button>
             </div>
         </div>

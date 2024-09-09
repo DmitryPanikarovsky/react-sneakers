@@ -1,12 +1,15 @@
+import { useState } from 'react'
 import { CardList } from './components/CardList/CardList'
 import { Drawer } from "./components/Drawer/Drawer";
 import { Header } from "./components/Header/Header";
 import "./styles/App.scss";
 
 function App() {
+    const [openCart, setOpenCart] = useState(true);
+
     return (
         <div className="wrapper">
-            <Drawer />
+            {openCart ? <Drawer /> : null}
             <Header />
             <div className="content">
                 <div className="content__header">

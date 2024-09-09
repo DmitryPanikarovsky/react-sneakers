@@ -7,11 +7,10 @@ export const CardList = () => {
         <div className={styles.CardList}>
             {collectionProducts.map((item) => (
                 <Card
+                    key={item.price}
                     title={item.title}
                     price={item.price}
                     imageUrl={item.imageUrl}
-                    addToFavorite={() => console.log('Добавить в избранное')}
-                    addToCart={() => console.log('Добавить в корзину')}
                 />
             ))}
         </div>
