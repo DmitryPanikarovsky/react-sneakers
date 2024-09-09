@@ -1,12 +1,14 @@
 import styles from "./Drawer.module.scss";
 
-export const Drawer = () => {
+export const Drawer = (props) => {
+    const {onClose} = props;
+
     return (
         <div className={styles.overlay}>
             <div className={styles.drawer}>
                 <div className={styles.header}>
                     <h2>Корзина</h2>
-                    <div className={styles.close}>
+                    <div onClick={onClose} className={styles.close}>
                         <img src="/img/btn-remove.svg" alt="close" />
                     </div>
                 </div>

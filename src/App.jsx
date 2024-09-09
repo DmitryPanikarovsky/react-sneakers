@@ -5,12 +5,12 @@ import { Header } from "./components/Header/Header";
 import "./styles/App.scss";
 
 function App() {
-    const [openCart, setOpenCart] = useState(true);
+    const [openCart, setOpenCart] = useState(false);
 
     return (
         <div className="wrapper">
-            {openCart ? <Drawer /> : null}
-            <Header />
+            {openCart && <Drawer onClose={() => setOpenCart(false)} />}
+            <Header onClickCart={() => setOpenCart(true)}/>
             <div className="content">
                 <div className="content__header">
                     <h1>Все кроссовки</h1>
