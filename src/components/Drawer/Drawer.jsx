@@ -1,7 +1,7 @@
 import styles from "./Drawer.module.scss";
 
 export const Drawer = (props) => {
-    const {onClose} = props;
+    const {onClose, items = []} = props;
 
     return (
         <div className={styles.overlay}>
@@ -13,82 +13,27 @@ export const Drawer = (props) => {
                     </div>
                 </div>
                 <ul className={styles.products}>
-                    <li className={styles.product}>
-                        <div className={styles.img}>
-                            <img
-                                src="/img/sneakers/sneakers-1.png"
-                                alt="sneakers"
-                            />
-                        </div>
-                        <div className={styles["title-price"]}>
-                            <p className={styles.title}>
-                                Мужские Кроссовки Nike Blazer Mid Suede
-                            </p>
-                            <div>
-                                12999 <span>₽</span>
+                    {items.map((item) => (
+                        <li className={styles.product}>
+                            <div className={styles.img}>
+                                <img
+                                    src={item.imageUrl}
+                                    alt="sneakers"
+                                />
                             </div>
-                        </div>
-                        <button>
-                            <img src="/img/btn-remove.svg" alt="remove" />
-                        </button>
-                    </li>
-                    <li className={styles.product}>
-                        <div className={styles.img}>
-                            <img
-                                src="/img/sneakers/sneakers-1.png"
-                                alt="sneakers"
-                            />
-                        </div>
-                        <div className={styles["title-price"]}>
-                            <p className={styles.title}>
-                                Мужские Кроссовки Nike Blazer Mid Suede
-                            </p>
-                            <div>
-                                12999 <span>₽</span>
+                            <div className={styles["title-price"]}>
+                                <p className={styles.title}>
+                                    {item.title}
+                                </p>
+                                <div>
+                                    {item.price} <span>₽</span>
+                                </div>
                             </div>
-                        </div>
-                        <button>
-                            <img src="/img/btn-remove.svg" alt="remove" />
-                        </button>
-                    </li>
-                    <li className={styles.product}>
-                        <div className={styles.img}>
-                            <img
-                                src="/img/sneakers/sneakers-1.png"
-                                alt="sneakers"
-                            />
-                        </div>
-                        <div className={styles["title-price"]}>
-                            <p className={styles.title}>
-                                Мужские Кроссовки Nike Blazer Mid Suede
-                            </p>
-                            <div>
-                                12999 <span>₽</span>
-                            </div>
-                        </div>
-                        <button>
-                            <img src="/img/btn-remove.svg" alt="remove" />
-                        </button>
-                    </li>
-                    <li className={styles.product}>
-                        <div className={styles.img}>
-                            <img
-                                src="/img/sneakers/sneakers-1.png"
-                                alt="sneakers"
-                            />
-                        </div>
-                        <div className={styles["title-price"]}>
-                            <p className={styles.title}>
-                                Мужские Кроссовки Nike Blazer Mid Suede
-                            </p>
-                            <div>
-                                12999 <span>₽</span>
-                            </div>
-                        </div>
-                        <button>
-                            <img src="/img/btn-remove.svg" alt="remove" />
-                        </button>
-                    </li>
+                            <button>
+                                <img src="/img/btn-remove.svg" alt="remove" />
+                            </button>
+                        </li>
+                    ))}
                 </ul>
                 <div className={styles.total}>
                     <ul className={styles.totalBlock}>

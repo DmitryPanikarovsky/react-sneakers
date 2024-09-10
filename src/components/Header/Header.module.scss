@@ -49,6 +49,19 @@
             cursor: pointer;
             transition: all .2s;
 
+            p {
+                width: 33px;
+                height: 33px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #b6dbf3;
+                border-radius: 50%;
+                font-weight: 700;
+                font-size: 16px;
+                color: #202020;
+            }
+
             img {
                 width: 18px;
                 height: 18px;

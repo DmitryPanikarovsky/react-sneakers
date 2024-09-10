@@ -1,15 +1,27 @@
+import { useEffect, useState } from 'react'
 import { Card } from "../Card/Card";
 import styles from "./CardList.module.scss";
 
-export const CardList = () => {
+export const CardList = ({addProduct}) => {
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch("https://66def6e6de4426916ee31d44.mockapi.io/items")
+            .then(response => response.json())
+            .then(json => setItems(json));
+    }, []);
+
     return (
         <div className={styles.CardList}>
-            {.map((item) => (
+            {items.map((item) => (
                 <Card
-                    key={item.price}
+                    key={item.id}
                     title={item.title}
                     price={item.price}
                     imageUrl={item.imageUrl}
+                    onPlus={product => addProduct(product)}
+                    onFavorite={() => console.log('Добавили в избранное')}
                 />
             ))}
         </div>

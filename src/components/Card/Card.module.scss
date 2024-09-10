@@ -11,8 +11,8 @@
     transition: all .3s;
 
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .5)
+        transform: translate(-5px, -5px);
+        box-shadow: 17px 17px 36px -15px rgba(99, 99, 99, 0.77);
     }
 
     .bookmarks {

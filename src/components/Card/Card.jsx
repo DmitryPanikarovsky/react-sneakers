@@ -2,12 +2,13 @@ import { useState } from "react";
 import styles from "./Card.module.scss";
 
 export const Card = (props) => {
-    const { title, price, imageUrl } = props;
+    const { title, price, imageUrl, onPlus } = props;
     
     const [checked, setChecked] = useState(false);
 
     const handleClick = () => {
-        setChecked(!checked)
+        onPlus({title, price, imageUrl});
+        setChecked(!checked);
     }
 
     return (
