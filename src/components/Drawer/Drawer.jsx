@@ -14,7 +14,7 @@ export const Drawer = (props) => {
                 </div>
                 <ul className={styles.products}>
                     {items.map((item) => (
-                        <li className={styles.product}>
+                        <li key={item.id} className={styles.product}>
                             <div className={styles.img}>
                                 <img
                                     src={item.imageUrl}

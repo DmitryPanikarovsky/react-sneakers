@@ -25,6 +25,23 @@
                     left: 18px;
                 }
 
+                .clear {
+                    position: absolute;
+                    top: -5px;
+                    right: 55px;
+                    cursor: pointer;
+                    
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        transition: all .2s;
+            
+                        &:hover {
+                            opacity: .6;
+                        }
+                    }
+                }
+
                 .input {
                     width: 250px;
                     font-size: 16px;
