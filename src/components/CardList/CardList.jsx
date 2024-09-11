@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import styles from "./CardList.module.scss";
 
-export const CardList = ({ addProduct }) => {
+export const CardList = ({ addProduct, searchValue }) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -15,16 +15,19 @@ export const CardList = ({ addProduct }) => {
 
     return (
         <div className={styles.CardList}>
-            {items.map((item) => (
-                <Card
-                    key={item.id}
-                    title={item.title}
-                    price={item.price}
-                    imageUrl={item.imageUrl}
-                    onPlus={(product) => addProduct(product)}
-                    onFavorite={() => console.log("Добавили в избранное")}
-                />
-            ))}
+            {items
+                .filter((item) => item.title.includes(searchValue))
+                .map((item) => (
+                    <Card
+                        key={item.id}
+                        title={item.title}
+                        price={item.price}
+                        imageUrl={item.imageUrl}
+                        onPlus={(product) => addProduct(product)}
+                        onFavorite={() => console.log("Добавили в избранное")}
+                    />
+                ))
+            }
         </div>
     );
 };

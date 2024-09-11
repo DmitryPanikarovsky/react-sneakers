@@ -41,13 +41,16 @@ function App() {
                             value={searchValue}
                         />
                         {searchValue && (
-                            <div onClick={() => setSearchValue("")} className="clear">
+                            <div
+                                onClick={() => setSearchValue("")}
+                                className="clear"
+                            >
                                 <img src="/img/btn-remove.svg" alt="clear" />
                             </div>
                         )}
                     </div>
                 </div>
-                <CardList addProduct={onAddToCart} />
+                <CardList addProduct={onAddToCart} searchValue={searchValue} />
             </div>
         </div>
     );

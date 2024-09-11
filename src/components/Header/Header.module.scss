@@ -8,24 +8,32 @@
     .logo {
         display: flex;
         gap: 16px;
+        align-items: center;
 
         img {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
         }
 
         .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 7px;
+            
             div {
+                font-family: 'Pacifico', cursive;
                 font-weight: 700;
-                font-size: 20px;
-                line-height: 24px;
+                font-size: 22px;
+                line-height: 22px;
                 text-transform: uppercase;
+                flex: 1;
             }
-
+            
             p {
                 font-weight: 400;
                 font-size: 14px;
-                line-height: 17px;
+                line-height: 14px;
                 color: #9d9d9d;
             }
         }
