@@ -16,7 +16,9 @@ export const CardList = ({ addProduct, searchValue }) => {
     return (
         <div className={styles.CardList}>
             {items
-                .filter((item) => item.title.includes(searchValue))
+                .filter((item) =>
+                    item.title.toLowerCase().includes(searchValue.toLowerCase())
+                )
                 .map((item) => (
                     <Card
                         key={item.id}
