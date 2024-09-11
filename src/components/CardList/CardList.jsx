@@ -26,8 +26,7 @@ export const CardList = ({ addProduct, searchValue }) => {
                         onPlus={(product) => addProduct(product)}
                         onFavorite={() => console.log("Добавили в избранное")}
                     />
-                ))
-            }
+                ))}
         </div>
     );
 };

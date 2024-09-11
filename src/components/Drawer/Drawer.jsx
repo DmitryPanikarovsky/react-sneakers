@@ -1,7 +1,7 @@
 import styles from "./Drawer.module.scss";
 
 export const Drawer = (props) => {
-    const {onClose, items = []} = props;
+    const { onClose, items = [] } = props;
 
     return (
         <div className={styles.overlay}>
@@ -16,15 +16,10 @@ export const Drawer = (props) => {
                     {items.map((item) => (
                         <li key={item.id} className={styles.product}>
                             <div className={styles.img}>
-                                <img
-                                    src={item.imageUrl}
-                                    alt="sneakers"
-                                />
+                                <img src={item.imageUrl} alt="sneakers" />
                             </div>
                             <div className={styles["title-price"]}>
-                                <p className={styles.title}>
-                                    {item.title}
-                                </p>
+                                <p className={styles.title}>{item.title}</p>
                                 <div>
                                     {item.price} <span>₽</span>
                                 </div>
