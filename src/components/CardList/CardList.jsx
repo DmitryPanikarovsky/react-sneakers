@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import { Card } from "../Card/Card";
 import styles from "./CardList.module.scss";
+import axios from 'axios'
 
 export const CardList = ({ addProduct, searchValue }) => {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = React.useState([]);
 
-    useEffect(() => {
-        setTimeout(() => {
-            fetch("https://66def6e6de4426916ee31d44.mockapi.io/items")
-                .then((response) => response.json())
-                .then((json) => setItems(json));
-        }, 1500);
+    React.useEffect(() => {
+        axios
+            .get("https://66def6e6de4426916ee31d44.mockapi.io/items")
+            .then((response) => setItems(response.data));
     }, []);
 
     return (

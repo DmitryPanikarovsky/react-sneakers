@@ -1,7 +1,7 @@
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
 export const Header = (props) => {
-    const {onClickCart, items = []} = props;
+    const { onClickCart, items = [] } = props;
 
     return (
         <header className={styles.header}>
@@ -14,7 +14,6 @@ export const Header = (props) => {
             </div>
             <div className={styles.info}>
                 <div onClick={onClickCart} className={styles["info-block"]}>
-                    <p>{items.length}</p>
                     <img
                         className="img"
                         src="/img/cart.svg"
@@ -23,6 +22,7 @@ export const Header = (props) => {
                     <div>
                         1205 <span>₽</span>
                     </div>
+                    <p>{items.length}</p>
                 </div>
                 <div className={styles["info-block"]}>
                     <img
