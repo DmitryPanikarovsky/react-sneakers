@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
 
 export const Header = (props) => {
-    const { onClickCart, items = [] } = props;
+    const { onClickCart, items } = props;
 
     return (
         <header className={styles.header}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "../Card/Card";
 import styles from "./CardList.module.scss";
-import axios from 'axios'
+import axios from "axios";
 
 export const CardList = ({ addProduct, searchValue }) => {
     const [items, setItems] = React.useState([]);
