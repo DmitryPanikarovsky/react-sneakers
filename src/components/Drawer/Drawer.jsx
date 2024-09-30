@@ -7,7 +7,7 @@ export const Drawer = (props) => {
 
     React.useEffect(() => {
         axios
-            .get("https://66def6e6de4426916ee31d44.mockapi.io/cart")
+            .get("https://66f3c9c977b5e8897096d661.mockapi.io/cart")
             .then((response) => setCartItems(response.data));
     }, []);
 

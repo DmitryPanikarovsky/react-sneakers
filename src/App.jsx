@@ -3,7 +3,7 @@ import { CardList } from "./components/CardList/CardList";
 import { Drawer } from "./components/Drawer/Drawer";
 import { Header } from "./components/Header/Header";
 import "./styles/App.scss";
-import axios from "axios";
+import axios from 'axios'
 
 function App() {
     const [openCart, setOpenCart] = React.useState(false);
@@ -13,12 +13,12 @@ function App() {
     const [searchValue, setSearchValue] = React.useState("");
 
     const onAddToCart = (product) => {
-        axios.post("https://66def6e6de4426916ee31d44.mockapi.io/cart", product);
+        axios.post("https://66f3c9c977b5e8897096d661.mockapi.io/cart", product);
         setCartItems((prev) => [...prev, product]);
     };
 
     const onRemoveProductCart = (id) => {
-        axios.delete(`https://66def6e6de4426916ee31d44.mockapi.io/cart/${id}`);
+        axios.delete(`https://66f3c9c977b5e8897096d661.mockapi.io/cart/${id}`);
         setCartItems((prev) => prev.filter((item) => item.id !== id));
     };
 

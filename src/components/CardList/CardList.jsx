@@ -1,16 +1,18 @@
 import React from "react";
 import { Card } from "../Card/Card";
 import styles from "./CardList.module.scss";
-import axios from "axios";
+import axios from 'axios'
 
 export const CardList = ({ addProduct, searchValue }) => {
+
     const [items, setItems] = React.useState([]);
 
     React.useEffect(() => {
         axios
-            .get("https://66def6e6de4426916ee31d44.mockapi.io/items")
-            .then((response) => setItems(response.data));
-    }, []);
+            .get("https://66f3c9c977b5e8897096d661.mockapi.io/products")
+            .then(response => setItems(response.data));
+    }, [])
+
 
     return (
         <div className={styles.CardList}>
@@ -25,7 +27,6 @@ export const CardList = ({ addProduct, searchValue }) => {
                         price={item.price}
                         imageUrl={item.imageUrl}
                         onPlus={(product) => addProduct(product)}
-                        onFavorite={() => console.log("Добавили в избранное")}
                     />
                 ))}
         </div>

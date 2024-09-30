@@ -3,16 +3,17 @@
     background: #fff;
     width: 210px;
     padding: 25px;
-    border: 1px solid #aeaeae;
+    box-shadow: 17px 17px 36px -15px #636363bd;
+    border-left: 1px solid rgba(99, 99, 99, 0.288);
+    border-top: 1px solid rgba(99, 99, 99, 0.287);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    transition: all .3s;
+    transition: all .2s;
 
     &:hover {
-        transform: translate(-5px, -5px);
-        box-shadow: 17px 17px 36px -15px rgba(99, 99, 99, 0.77);
+        transform: translateY(-5px);
     }
 
     .bookmarks {
